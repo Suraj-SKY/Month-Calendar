@@ -1,0 +1,100 @@
+/* 
+todo: modify hover effect similar to as in win10
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: salmon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calender {
+    width: 450px;
+    height: 480px;
+    background-color: black;
+    color: lightgray;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.month {
+    width: 100%;
+    height: 120px;
+    background-color: lightseagreen;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.month h1 {
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.month p {
+    font-size: 16px;
+}
+
+.weekdays {
+    width: 100%;
+    height: 50px;
+    /* background-color: lightseagreen;
+    border-radius: 10px 10px 0 0; */
+    display: flex;
+    /* justify-content: center;
+    align-items: center;
+    text-align: center; */
+}
+
+.weekdays div {
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.days {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2px;
+}
+
+.days div {
+    font-size: 14px;
+    margin: 3px;
+    width: 57.5px;
+    /* width: 57.5px; --> by trail and error */
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.days div:hover:not(.empty):not(.today) {
+    /* it means hover will not applied to empty class */
+    cursor: pointer;
+    border: 2px solid gray;
+}
+
+.today {
+    background-color: lightseagreen;
+    cursor: pointer;
+}
